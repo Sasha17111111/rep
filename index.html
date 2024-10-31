@@ -3,10 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/style.css" rel="stylesheet" type="text/css">
-    <title>Document</title>
+    <title>Minecraft Shop</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <script src="js/main.js"></script> 
+<header>
+    <h1>Магазин Minecraft</h1>
+</header>
+<nav>
+    <ul>
+        <li><a href="#home">Главная</a></li>
+        <li><a href="#products">Товары</a></li>
+        <li><a href="#gallery">Галерея</a></li>
+        <li><a href="javascript:void(0)" id="open-cart">Корзина (<span id="cart-count">0</span>)</a></li>
+        <li><a href="#about">О нас</a></li>
+    </ul>
+</nav>
+<aside id="ad">
+    Реклама: Получите 20% скидку на следующее приобретение Diamond Sword!
+</aside>
+<main>
+    <section id="products">
+        <h2>Товары</h2>
+        <div id="product-container"></div>
+    </section>
+    <section id="gallery">
+        <h2>Галерея</h2>
+        <div id="gallery-container"></div>
+    </section>
+    <section id="recommendations">
+        <h2>Рекомендации</h2>
+        <div id="recommendations-container"></div>
+    </section>
+</main>
+<div id="cart-modal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <div id="cart-container">
+            <p>Ваша корзина пуста.</p>
+        </div>
+        <p id="total-price"></p>
+        <button id="checkout" class="checkout-button">Оформить заказ</button>
+    </div>
+</div>
+<footer>
+    <p>&copy; 2023 Minecraft Shop</p>
+</footer>
 </body>
 </html>
